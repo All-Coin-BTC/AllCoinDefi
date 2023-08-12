@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    background-color: #171819; /*dark mode: rgb(23,24,28) ------ lightMod#eeeeeee*/
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    color: #2de1bd;
+}
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    padding-bottom: 50px;
+  }
+  .stake-card-container{
+    background-color: #1D2833;
+  }
+  .line{
+    border-left: thin solid white;
+    border-width: 1px;
+    
+  }
+
+  .hamburger-inactive{
+    display: none;
+  }
+  .hamburger-active{
+    display: block;
+    width:100vw;
+    height: 100vh;
+   
+  }
