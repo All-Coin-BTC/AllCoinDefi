@@ -10,7 +10,10 @@ export default function StakeCard({id, img, name, desc, apr, amtStaked, learnMor
         <div className="financial-information flex items-center justify-center gap-4 mt-4 w-full">
             <div className="left-financial-information text-center justify-center items-center w-40">
                 <div className="apr-amount text-green-400">{(apr*100).toFixed(1)}%</div>
-                <div className="apr-tag text-gray-300 font-light">APR i</div>
+                <div className="apr-info flex justify-center gap-2 items-center">
+                    <div className="apr-tag text-gray-300 font-light text-sm">APR </div>
+                <img src = "info.png" className='w-5 h-5' />
+                </div>
                 </div>
             <div className="line h-14"></div>
             <div className="right-financial-information text-white text-center w-40">
