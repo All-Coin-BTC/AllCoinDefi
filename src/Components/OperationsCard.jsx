@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function InsuranceCard({
+export default function OperationsCard({
     id,
     img,
     name,
@@ -13,13 +13,13 @@ export default function InsuranceCard({
   
       <div
       key={id}
-      className="stake-card-container p-8 mx-4 flex flex-col justify-center items-center rounded-full my-8"
+      className="stake-card-container p-8 mx-4 flex flex-col justify-center items-center rounded-xl my-8"
     >
-      <div className="insurance-img">
+      <div className="operations-img">
         <img src={img} className="w-12" />
       </div>
-      <div className="insurance-name text-white text-4xl text-center">{name}</div>
-      <div className="insurance-description text-gray-400 text-center text-sm mt-4">
+      <div className="operations-name text-white text-4xl text-center">{name}</div>
+      <div className="operations-description text-gray-400 text-center text-sm mt-4">
         {desc}
       </div>
       <div className="financial-information flex items-center justify-center gap-4 mt-4 w-full">

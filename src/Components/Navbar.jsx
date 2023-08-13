@@ -2,8 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 export default function Navbar() {
   const [displayHamburger, setDisplayHamburger] = React.useState(false);
-
+  const [displayTradeInstruments, setDisplayTradeInstruments] =
+    React.useState(false);
+  const [displayMarkets, setDisplayMarkets] = React.useState(false);
+  const [displayDocs, setDisplayDocs] = React.useState(false);
   function closeHamburgerOnClick() {
+    setDisplayTradeInstruments(false);
+    setDisplayMarkets(false);
+    setDisplayDocs(false);
     setDisplayHamburger(!displayHamburger);
   }
   return (
@@ -33,35 +39,83 @@ export default function Navbar() {
       <div
         className={` ${
           displayHamburger ? "hamburger-active" : "hamburger-inactive"
-        } py-4 px-4`}
+        } py-4 px-4 flex flex-col justify-start items-center mt-8`}
       >
-        <div className="trade-instruments-menu-title text-gray-400 text-sm">
+        <div
+          className="trade-instruments-menu-title  text-center text-3xl text-white"
+          onClick={() => setDisplayTradeInstruments(!displayTradeInstruments)}
+        >
           Trade Instruments
         </div>
-        <div className="trade-instruments-links grid grid-cols-2 grid-rows-2 gap-4 place-items-center rounded-xl p-6 mt-2 mb-4 bg-gray-100">
+        <div
+          className={`${
+            displayTradeInstruments
+              ? "trade-instruments-links-active"
+              : "trade-instruments-links-inactive"
+          } links-container text-white`}
+        >
           <Link to="/assets" onClick={() => closeHamburgerOnClick()}>
-            <p className="text-black text-center">Assets</p>
+            <p className=" text-center">Assets</p>
           </Link>
           <Link to="/insurance" onClick={() => closeHamburgerOnClick()}>
-            <p className="text-black text-center">Insurance</p>
+            <p className=" text-center">Insurance</p>
           </Link>
           <Link to="/product-basket" onClick={() => closeHamburgerOnClick()}>
-            <p className="text-black text-center">Product Basket</p>
+            <p className=" text-center">Product Basket</p>
           </Link>
-          <p className="text-black text-center">Operations</p>
+          <Link to="operations" onClick={() => closeHamburgerOnClick()}>
+            <p className=" text-center ">Operations</p>
+          </Link>
         </div>
-        <div className="markets-menu-title text-gray-400 text-sm">Markets</div>
-        <div className="markets-links grid grid-cols-2 grid-rows-2 gap-4 place-items-center rounded-xl p-6 mt-2 mb-4 bg-gray-100">
-          <p className="text-black text-center">Assets</p>
-          <p className="text-black text-center">Insurance</p>
-          <p className="text-black text-center">Product Basket</p>
-          <p className="text-black text-center">Operations</p>
+
+        <div
+          className="markets-menu-title text-center text-3xl text-white mt-8"
+          onClick={() => setDisplayMarkets(!displayMarkets)}
+        >
+          Markets
         </div>
-        <div className="docs-menu-title text-gray-400 text-sm ">Docs</div>
-        <div className="docs-links grid grid-cols-2 grid-rows-2 gap-8 place-items-center rounded-xl p-8 mt-2 mb-4 bg-gray-100">
-          <p className="text-black text-center">Whitepaper</p>
-          <p className="text-black text-center">Medium</p>
-          <p className="text-black text-center">Roadmap</p>
+        <div
+          className={`${
+            displayMarkets ? "markets-links-active" : "markets-links-inactive"
+          } links-container text-white`}
+        >
+          <Link to="/assets" onClick={() => closeHamburgerOnClick()}>
+            <p className=" text-center">Fixed Assets</p>
+          </Link>
+          <Link to="/insurance" onClick={() => closeHamburgerOnClick()}>
+            <p className=" text-center">Insurance Pools</p>
+          </Link>
+          <Link to="/product-basket" onClick={() => closeHamburgerOnClick()}>
+            <p className=" text-center">Stable Coin Pools</p>
+          </Link>
+          <Link to="operations" onClick={() => closeHamburgerOnClick()}>
+            <p className=" text-center ">AllCoin Pools</p>
+          </Link>
+        </div>
+
+        <div
+          className="docs-menu-title text-center text-3xl text-white mt-8 "
+          onClick={() => setDisplayDocs(!displayDocs)}
+        >
+          Docs
+        </div>
+        <div
+          className={`${
+            displayDocs ? "docs-links-active" : "docs-links-inactive"
+          } links-container text-white`}
+        >
+          <Link to="/assets" onClick={() => closeHamburgerOnClick()}>
+            <p className=" text-center">Assets</p>
+          </Link>
+          <Link to="/insurance" onClick={() => closeHamburgerOnClick()}>
+            <p className=" text-center">Insurance</p>
+          </Link>
+          <Link to="/product-basket" onClick={() => closeHamburgerOnClick()}>
+            <p className=" text-center">Product Basket</p>
+          </Link>
+          <Link to="operations" onClick={() => closeHamburgerOnClick()}>
+            <p className=" text-center ">Operations</p>
+          </Link>
         </div>
       </div>
     </>

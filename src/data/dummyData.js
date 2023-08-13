@@ -62,4 +62,25 @@ export const dummyInsurance = [
     learnMoreInfo: "The warehouses generate yield and you receive that!",
   },
 ];
+
+export const dummyOperations = [
+  {
+    id: 0,
+    img: "/warehouse3.png",
+    name: "LityerHub 1",
+    desc: "Stake any amount of USDC, and receive daily staking rewards.",
+    apr: 0.082,
+    amtStaked: 1211285,
+    learnMoreInfo: "The warehouses generate yield and you receive that!",
+  },
+  {
+    id: 1,
+    img: "/warehouse4.png",
+    name: "LityerHub 2",
+    desc: "Stake any amount of USDC, and receive daily staking rewards.",
+    apr: 0.079,
+    amtStaked: 1715285,
+    learnMoreInfo: "The warehouses generate yield and you receive that!",
+  },
+];
 //id, img, name, desc, apr, amtStaked, learnMoreInfo
