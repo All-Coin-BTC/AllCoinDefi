@@ -6,7 +6,7 @@ export default function Navbar() {
     React.useState(false);
   const [displayMarkets, setDisplayMarkets] = React.useState(false);
   const [displayDocs, setDisplayDocs] = React.useState(false);
-  function closeHamburgerOnClick() {
+  function toggleHamburgerOnClick() {
     setDisplayTradeInstruments(false);
     setDisplayMarkets(false);
     setDisplayDocs(false);
@@ -24,14 +24,14 @@ export default function Navbar() {
             <img
               className="w-16"
               src="more.png"
-              onClick={() => setDisplayHamburger(!displayHamburger)}
+              onClick={() => toggleHamburgerOnClick()}
             />
           )}
           {displayHamburger && (
             <img
               className="w-16"
               src="close.png"
-              onClick={() => setDisplayHamburger(!displayHamburger)}
+              onClick={() => toggleHamburgerOnClick()}
             />
           )}
         </div>
@@ -42,7 +42,7 @@ export default function Navbar() {
         } py-4 px-4 flex flex-col justify-start items-center mt-8`}
       >
         <div
-          className="trade-instruments-menu-title  text-center text-3xl text-white"
+          className="trade-instruments-menu-title  text-center text-3xl text-white cursor-pointer"
           onClick={() => setDisplayTradeInstruments(!displayTradeInstruments)}
         >
           Trade Instruments
@@ -52,24 +52,24 @@ export default function Navbar() {
             displayTradeInstruments
               ? "trade-instruments-links-active"
               : "trade-instruments-links-inactive"
-          } links-container text-white`}
+          } links-container text-white gap-3 flex flex-col`}
         >
-          <Link to="/assets" onClick={() => closeHamburgerOnClick()}>
-            <p className=" text-center">Assets</p>
+          <Link to="/assets" onClick={() => toggleHamburgerOnClick()}>
+            <p className=" text-center text-sm mt-4">Assets</p>
           </Link>
-          <Link to="/insurance" onClick={() => closeHamburgerOnClick()}>
-            <p className=" text-center">Insurance</p>
+          <Link to="/insurance" onClick={() => toggleHamburgerOnClick()}>
+            <p className=" text-center text-sm">Insurance</p>
           </Link>
-          <Link to="/product-basket" onClick={() => closeHamburgerOnClick()}>
-            <p className=" text-center">Product Basket</p>
+          <Link to="/product-basket" onClick={() => toggleHamburgerOnClick()}>
+            <p className=" text-center text-sm">Product Basket</p>
           </Link>
-          <Link to="operations" onClick={() => closeHamburgerOnClick()}>
-            <p className=" text-center ">Operations</p>
+          <Link to="operations" onClick={() => toggleHamburgerOnClick()}>
+            <p className=" text-center text-sm">Operations</p>
           </Link>
         </div>
 
         <div
-          className="markets-menu-title text-center text-3xl text-white mt-8"
+          className="markets-menu-title text-center text-3xl text-white mt-8 cursor-pointer"
           onClick={() => setDisplayMarkets(!displayMarkets)}
         >
           Markets
@@ -77,24 +77,27 @@ export default function Navbar() {
         <div
           className={`${
             displayMarkets ? "markets-links-active" : "markets-links-inactive"
-          } links-container text-white`}
+          } links-container text-white gap-3 flex flex-col`}
         >
-          <Link to="/assets" onClick={() => closeHamburgerOnClick()}>
-            <p className=" text-center">Fixed Assets</p>
+          <Link
+            to="/markets-fixed-assets"
+            onClick={() => toggleHamburgerOnClick()}
+          >
+            <p className=" text-center text-sm mt-4">Fixed Assets</p>
           </Link>
-          <Link to="/insurance" onClick={() => closeHamburgerOnClick()}>
-            <p className=" text-center">Insurance Pools</p>
+          <Link to="/insurance" onClick={() => toggleHamburgerOnClick()}>
+            <p className=" text-center text-sm">Insurance Pools</p>
           </Link>
-          <Link to="/product-basket" onClick={() => closeHamburgerOnClick()}>
-            <p className=" text-center">Stable Coin Pools</p>
+          <Link to="/product-basket" onClick={() => toggleHamburgerOnClick()}>
+            <p className=" text-center text-sm">Stable Coin Pools</p>
           </Link>
-          <Link to="operations" onClick={() => closeHamburgerOnClick()}>
-            <p className=" text-center ">AllCoin Pools</p>
+          <Link to="operations" onClick={() => toggleHamburgerOnClick()}>
+            <p className=" text-center text-sm ">AllCoin Pools</p>
           </Link>
         </div>
 
         <div
-          className="docs-menu-title text-center text-3xl text-white mt-8 "
+          className="docs-menu-title text-center text-3xl text-white mt-8 cursor-pointer "
           onClick={() => setDisplayDocs(!displayDocs)}
         >
           Docs
@@ -102,19 +105,16 @@ export default function Navbar() {
         <div
           className={`${
             displayDocs ? "docs-links-active" : "docs-links-inactive"
-          } links-container text-white`}
+          } links-container text-white gap-3 flex flex-col`}
         >
-          <Link to="/assets" onClick={() => closeHamburgerOnClick()}>
-            <p className=" text-center">Assets</p>
+          <Link to="/assets" onClick={() => toggleHamburgerOnClick()}>
+            <p className=" text-center text-sm mt-4">Whitepaper</p>
           </Link>
-          <Link to="/insurance" onClick={() => closeHamburgerOnClick()}>
-            <p className=" text-center">Insurance</p>
+          <Link to="/insurance" onClick={() => toggleHamburgerOnClick()}>
+            <p className=" text-center text-sm">Medium</p>
           </Link>
-          <Link to="/product-basket" onClick={() => closeHamburgerOnClick()}>
-            <p className=" text-center">Product Basket</p>
-          </Link>
-          <Link to="operations" onClick={() => closeHamburgerOnClick()}>
-            <p className=" text-center ">Operations</p>
+          <Link to="/product-basket" onClick={() => toggleHamburgerOnClick()}>
+            <p className=" text-center text-sm">Roadmap</p>
           </Link>
         </div>
       </div>

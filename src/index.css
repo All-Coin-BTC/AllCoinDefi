@@ -1,68 +1,64 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-    background-color: #171819; /*dark mode: rgb(23,24,28) ------ lightMod#eeeeeee*/
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    color: #2de1bd;
+  background-color: #171819; /*dark mode: rgb(23,24,28) ------ lightMod#eeeeeee*/
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  color: #2de1bd;
 }
 body {
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-size: 22px;
-    padding-bottom: 50px;
-  }
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  padding-bottom: 50px;
+}
 /*Navbar Styles*/
-.hamburger-inactive{
+.hamburger-inactive {
   display: none;
 }
-.hamburger-active{
+.hamburger-active {
   display: flex;
-  width:100vw;
+  width: 100vw;
   height: 100vh;
- 
 }
-  .trade-instruments-links-inactive{
-    display: none;
-  }
+.trade-instruments-links-inactive {
+  display: none;
+}
 
-  .trade-instruments-links-active{
-    
-    display:block;
-  }
+.trade-instruments-links-active {
+  display: flex;
+}
 
-  .markets-links-inactive{
-    display:none;
-  }
-  .markets-links-active{
-    display: block;
-  }
+.markets-links-inactive {
+  display: none;
+}
+.markets-links-active {
+  display: flex;
+}
 
-  .docs-links-inactive{
-    display:none;
-  }
-  .docs-link-active{
-    display:block;
-  }
+.docs-links-inactive {
+  display: none;
+}
+.docs-link-active {
+  display: flex;
+}
 
-  /* End navbar*/
-  .stake-card-container{
-    background-color: #1D2833;
-  }
-  .line{
-    border-left: thin solid white;
-    border-width: 1px;
-    
-  }
+/* End navbar*/
 
-  
-
-  .products-container{
-    background-color: #1D2833
-  }
+.stake-card-container {
+  background-color: #1d2833;
+}
+.line {
+  border-left: thin solid white;
+  border-width: 1px;
+}
+.products-container {
+  background-color: #1d2833;
+}

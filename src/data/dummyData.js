@@ -83,4 +83,33 @@ export const dummyOperations = [
     learnMoreInfo: "The warehouses generate yield and you receive that!",
   },
 ];
-//id, img, name, desc, apr, amtStaked, learnMoreInfo
+
+export const dummyFixedAssets = [
+  {
+    id: 0,
+    img: "/delivery-van.png",
+    name: "Delivery Van #1",
+    desc: "Stake your BTC in the van pool to receive daily staking rewards. Your sBTC can be used across the DeFi ecosystem",
+    apr: 0.082,
+    amtStaked: 2814627,
+    learnMoreInfo: "The delivery vans generate yield and you receive that!",
+  },
+  {
+    id: 1,
+    img: "/warehouse.png",
+    name: "Lityer Hub #1",
+    desc: "Stake your BTC in the warehouse pool to receive daily staking rewards. Your sBTC can be used across the DeFi ecosystem",
+    apr: 0.122,
+    amtStaked: 3134627,
+    learnMoreInfo: "The warehouses generate yield and you receive that!",
+  },
+  {
+    id: 2,
+    img: "/warehouse.png",
+    name: "Lityer Hub #2",
+    desc: "Stake your BTC in the warehouse pool to receive daily staking rewards. Your sBTC can be used across the DeFi ecosystem",
+    apr: 0.145,
+    amtStaked: 2148127,
+    learnMoreInfo: "The warehouses generate yield and you receive that!",
+  },
+];
