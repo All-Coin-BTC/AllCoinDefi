@@ -16,10 +16,10 @@ export default function Navbar() {
     <>
       <div className="mobile-navbar py-4 px-4 flex items-center justify-between">
         <div className="left-mobile-items flex items-center gap-2">
-          <Link to="/">
+          <Link to="/" onClick={() => toggleHamburgerOnClick()}>
             <img className="w-16" src="Logo 8.png" />
           </Link>
-          <Link to="/">
+          <Link to="/" onClick={() => toggleHamburgerOnClick()}>
             <p>ALLCOIN</p>
           </Link>
         </div>
