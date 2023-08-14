@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function MarketFixedAssetCard({ data }) {
+export default function MarketCard({ data }) {
   return (
     <div className="markets-fixed-assets-card-container py-8 mx-4 flex flex-col justify-evenly items-center rounded-3xl bg-gray-800">
       {data.map((item) => (
@@ -27,7 +27,7 @@ export default function MarketFixedAssetCard({ data }) {
             <div className="bottom-row  flex items-center justify-center">
               <button className="px-4 py-3 bg-white text-black rounded-3xl mt-2 flex gap-2 items-center">
                 Stake Now
-                <img src="/bitcoin.png" className="w-6" />
+                <img src={item.currencyImg} className="w-6" />
               </button>
             </div>
           </div>

@@ -16,8 +16,12 @@ export default function Navbar() {
     <>
       <div className="mobile-navbar py-4 px-4 flex items-center justify-between">
         <div className="left-mobile-items flex items-center gap-2">
-          <img className="w-16" src="Logo 8.png" />
-          <p>ALLCOIN</p>
+          <Link to="/">
+            <img className="w-16" src="Logo 8.png" />
+          </Link>
+          <Link to="/">
+            <p>ALLCOIN</p>
+          </Link>
         </div>
         <div className="right-mobile-items">
           {!displayHamburger && (
@@ -85,13 +89,19 @@ export default function Navbar() {
           >
             <p className=" text-center text-sm mt-4">Fixed Assets</p>
           </Link>
-          <Link to="/insurance" onClick={() => toggleHamburgerOnClick()}>
+          <Link
+            to="/markets-insurance-pools"
+            onClick={() => toggleHamburgerOnClick()}
+          >
             <p className=" text-center text-sm">Insurance Pools</p>
           </Link>
-          <Link to="/product-basket" onClick={() => toggleHamburgerOnClick()}>
+          <Link
+            to="/markets-stable-coins"
+            onClick={() => toggleHamburgerOnClick()}
+          >
             <p className=" text-center text-sm">Stable Coin Pools</p>
           </Link>
-          <Link to="operations" onClick={() => toggleHamburgerOnClick()}>
+          <Link to="/markets-allcoin" onClick={() => toggleHamburgerOnClick()}>
             <p className=" text-center text-sm ">AllCoin Pools</p>
           </Link>
         </div>
@@ -107,13 +117,13 @@ export default function Navbar() {
             displayDocs ? "docs-links-active" : "docs-links-inactive"
           } links-container text-white gap-3 flex flex-col`}
         >
-          <Link to="/assets" onClick={() => toggleHamburgerOnClick()}>
+          <Link to="/" onClick={() => toggleHamburgerOnClick()}>
             <p className=" text-center text-sm mt-4">Whitepaper</p>
           </Link>
-          <Link to="/insurance" onClick={() => toggleHamburgerOnClick()}>
+          <Link to="/" onClick={() => toggleHamburgerOnClick()}>
             <p className=" text-center text-sm">Medium</p>
           </Link>
-          <Link to="/product-basket" onClick={() => toggleHamburgerOnClick()}>
+          <Link to="/" onClick={() => toggleHamburgerOnClick()}>
             <p className=" text-center text-sm">Roadmap</p>
           </Link>
         </div>

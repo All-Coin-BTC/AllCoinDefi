@@ -93,6 +93,7 @@ export const dummyFixedAssets = [
     apr: 0.082,
     amtStaked: 2814627,
     learnMoreInfo: "The delivery vans generate yield and you receive that!",
+    currencyImg: "/bitcoin.png",
   },
   {
     id: 1,
@@ -102,6 +103,7 @@ export const dummyFixedAssets = [
     apr: 0.122,
     amtStaked: 3134627,
     learnMoreInfo: "The warehouses generate yield and you receive that!",
+    currencyImg: "/bitcoin.png",
   },
   {
     id: 2,
@@ -111,5 +113,74 @@ export const dummyFixedAssets = [
     apr: 0.145,
     amtStaked: 2148127,
     learnMoreInfo: "The warehouses generate yield and you receive that!",
+    currencyImg: "/bitcoin.png",
+  },
+];
+
+export const dummyMarketInsurance = [
+  {
+    id: 0,
+    img: "/insurance.png",
+    name: "Insurance Pool",
+    desc: "Stake any amount of USDC, and receive daily staking rewards.",
+    apr: 0.062,
+    amtStaked: 141285,
+    learnMoreInfo: "The warehouses generate yield and you receive that!",
+    currencyImg: "/usdc.png",
+  },
+  {
+    id: 1,
+    img: "/security.png",
+    name: "Re-insurance Pool",
+    desc: "Stake any amount of USDC, and receive daily staking rewards.",
+    apr: 0.028,
+    amtStaked: 91412,
+    learnMoreInfo: "The warehouses generate yield and you receive that!",
+    currencyImg: "/usdc.png",
+  },
+];
+
+export const dummyStableCoinPools = [
+  {
+    id: 0,
+    img: "",
+    name: "Stable Coin Pool 1",
+    desc: "Stake any amount of USDC, and receive daily staking rewards.",
+    apr: 0.022,
+    amtStaked: 5121285,
+    learnMoreInfo: "The warehouses generate yield and you receive that!",
+    currencyImg: "/usdc.png",
+  },
+  {
+    id: 1,
+    img: "",
+    name: "Stable Coin Pool 2",
+    desc: "Stake any amount of USDC, and receive daily staking rewards.",
+    apr: 0.098,
+    amtStaked: 152112,
+    learnMoreInfo: "The warehouses generate yield and you receive that!",
+    currencyImg: "/usdc.png",
+  },
+];
+export const allCoinPools = [
+  {
+    id: 0,
+    img: "",
+    name: "AllCoin Pool 1",
+    desc: "Stake any amount of USDC, and receive daily staking rewards.",
+    apr: 0.092,
+    amtStaked: 4221285,
+    learnMoreInfo: "The warehouses generate yield and you receive that!",
+    currencyImg: "/Logo 12.png",
+  },
+  {
+    id: 1,
+    img: "",
+    name: "AllCoin Pool 2",
+    desc: "Stake any amount of USDC, and receive daily staking rewards.",
+    apr: 0.098,
+    amtStaked: 6152112,
+    learnMoreInfo: "The warehouses generate yield and you receive that!",
+    currencyImg: "/Logo 12.png",
   },
 ];

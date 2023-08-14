@@ -1,5 +1,5 @@
 import React from "react";
-import MarketFixedAssetCard from "../Components/MarketFixedAssetCard";
+import MarketCard from "../Components/MarketCard";
 import { dummyFixedAssets } from "../data/dummyData";
 const data = dummyFixedAssets;
 export default function MarketFixedAssets() {
@@ -11,7 +11,7 @@ export default function MarketFixedAssets() {
       <div className="markets-fixed-assets-subtitle text-gray-300 text-center mb-4 ">
         BTC Staking
       </div>
-      <MarketFixedAssetCard data={data} />
+      <MarketCard data={data} />
     </div>
   );
 }
