@@ -49,7 +49,7 @@ export default function Navbar() {
           className="trade-instruments-menu-title  text-center text-3xl text-white cursor-pointer"
           onClick={() => setDisplayTradeInstruments(!displayTradeInstruments)}
         >
-          Trade Instruments
+          Instruments
         </div>
         <div
           className={`${
@@ -58,17 +58,11 @@ export default function Navbar() {
               : "trade-instruments-links-inactive"
           } links-container text-white gap-3 flex flex-col`}
         >
-          <Link to="/assets" onClick={() => toggleHamburgerOnClick()}>
-            <p className=" text-center text-sm mt-4">Assets</p>
+          <Link to="/warehousing" onClick={() => toggleHamburgerOnClick()}>
+            <p className=" text-center text-sm mt-4">Warehousing</p>
           </Link>
-          <Link to="/insurance" onClick={() => toggleHamburgerOnClick()}>
-            <p className=" text-center text-sm">Insurance</p>
-          </Link>
-          <Link to="/product-basket" onClick={() => toggleHamburgerOnClick()}>
-            <p className=" text-center text-sm">Product Basket</p>
-          </Link>
-          <Link to="operations" onClick={() => toggleHamburgerOnClick()}>
-            <p className=" text-center text-sm">Operations</p>
+          <Link to="/logistics" onClick={() => toggleHamburgerOnClick()}>
+            <p className=" text-center text-sm">Logistics</p>
           </Link>
         </div>
 
@@ -76,7 +70,7 @@ export default function Navbar() {
           className="markets-menu-title text-center text-3xl text-white mt-8 cursor-pointer"
           onClick={() => setDisplayMarkets(!displayMarkets)}
         >
-          Markets
+          Liquidity Pools
         </div>
         <div
           className={`${
@@ -87,22 +81,22 @@ export default function Navbar() {
             to="/markets-fixed-assets"
             onClick={() => toggleHamburgerOnClick()}
           >
-            <p className=" text-center text-sm mt-4">Fixed Assets</p>
+            <p className=" text-center text-sm mt-4">Logistics Pools</p>
           </Link>
           <Link
             to="/markets-insurance-pools"
             onClick={() => toggleHamburgerOnClick()}
           >
-            <p className=" text-center text-sm">Insurance Pools</p>
+            <p className=" text-center text-sm">Warehouse Pools</p>
           </Link>
           <Link
             to="/markets-stable-coins"
             onClick={() => toggleHamburgerOnClick()}
           >
-            <p className=" text-center text-sm">Stable Coin Pools</p>
+            <p className=" text-center text-sm">Working Capital Pools</p>
           </Link>
           <Link to="/markets-allcoin" onClick={() => toggleHamburgerOnClick()}>
-            <p className=" text-center text-sm ">AllCoin Pools</p>
+            <p className=" text-center text-sm ">Insurance Pools</p>
           </Link>
         </div>
 

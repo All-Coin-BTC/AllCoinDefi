@@ -1,21 +1,35 @@
-export const dummyAssets = [
+export const dummyWarehouse = [
   {
     id: 0,
-    img: "/delivery-van.png",
-    name: "Delivery Vans",
-    desc: "Stake your BTC in the van pool to receive daily staking rewards. Your sBTC can be used across the DeFi ecosystem",
+    img: "/warehouse.png",
+    name: "Lityer Hub 1 Warehouse",
+    desc: "Stake your AllCoin in the LityerHub1 Warehouse pool to receive daily staking rewards.",
     apr: 0.082,
-    amtStaked: 2814627,
+    amtStaked: 814627,
+    revenue: 150000,
+    janitorLabor: 25000,
+    mechanicLabor: 15000,
+    vanOneCost: 10000,
+    vanTwoCost: 12500,
+    leaseCost: 50000,
+    insuranceCost: 7500,
     learnMoreInfo: "The delivery vans generate yield and you receive that!",
   },
+];
+export const dummyLogistics = [
   {
-    id: 1,
-    img: "/warehouse.png",
-    name: "Warehouse Lease",
-    desc: "Stake your BTC in the warehouse pool to receive daily staking rewards. Your sBTC can be used across the DeFi ecosystem",
-    apr: 0.122,
-    amtStaked: 3134627,
-    learnMoreInfo: "The warehouses generate yield and you receive that!",
+    id: 0,
+    img: "/logistics.png",
+    name: "Lityer Hub1 Logistics",
+    desc: "Stake your Allcoin in the LityerHub1 Logistics pool to receive daily staking rewards.",
+    apr: 0.065,
+    amtStaked: 491538,
+    revenue: 100000,
+    driverLabor: 28000,
+    maintenanceLabor: 4000,
+    gasolineCost: 5400,
+    insuranceCost: 8000,
+    learnMoreInfo: "The delivery vans generate yield and you receive that!",
   },
 ];
 export const dummyProducts = [
