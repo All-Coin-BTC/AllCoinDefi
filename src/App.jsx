@@ -10,11 +10,13 @@ import MarketStableCoins from "./Pages/MarketStableCoin";
 import MarketAllCoin from "./Pages/MarketAllCoin";
 import Warehousing from "./Pages/Warehousing";
 import Logistics from "./Pages/Logistics";
+import Homepage from "./Pages/Homepage";
 function App() {
   return (
     <>
       <Navbar />
       <Routes>
+        <Route path="/" element={<Homepage />} />
         <Route path="/warehousing" element={<Warehousing />} />
         <Route path="/logistics" element={<Logistics />} />
 
