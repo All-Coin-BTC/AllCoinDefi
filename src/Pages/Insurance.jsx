@@ -5,9 +5,7 @@ const data = dummyInsurance;
 export default function Insurance() {
   return (
     <div className="insurance-page-container">
-      <div className="insurance-title text-gray-400 text-center">
-        AllCoin Insurance
-      </div>
+      <div className="insurance-title text-gray-400 text-center">Insurance</div>
 
       {data.map((item) => (
         <div className="mt-4" key={item.id}>

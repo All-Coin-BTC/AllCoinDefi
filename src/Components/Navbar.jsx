@@ -26,14 +26,14 @@ export default function Navbar() {
         <div className="right-mobile-items">
           {!displayHamburger && (
             <img
-              className="w-16"
+              className="w-8"
               src="more.png"
               onClick={() => toggleHamburgerOnClick()}
             />
           )}
           {displayHamburger && (
             <img
-              className="w-16"
+              className="w-8"
               src="close.png"
               onClick={() => toggleHamburgerOnClick()}
             />
@@ -77,25 +77,19 @@ export default function Navbar() {
             displayMarkets ? "markets-links-active" : "markets-links-inactive"
           } links-container text-white gap-3 flex flex-col`}
         >
-          <Link
-            to="/markets-fixed-assets"
-            onClick={() => toggleHamburgerOnClick()}
-          >
+          <Link to="/logistics-pools" onClick={() => toggleHamburgerOnClick()}>
             <p className=" text-center text-sm mt-4">Logistics Pools</p>
           </Link>
-          <Link
-            to="/markets-insurance-pools"
-            onClick={() => toggleHamburgerOnClick()}
-          >
+          <Link to="/warehouse-pools" onClick={() => toggleHamburgerOnClick()}>
             <p className=" text-center text-sm">Warehouse Pools</p>
           </Link>
           <Link
-            to="/markets-stable-coins"
+            to="/working-capital-pools"
             onClick={() => toggleHamburgerOnClick()}
           >
             <p className=" text-center text-sm">Working Capital Pools</p>
           </Link>
-          <Link to="/markets-allcoin" onClick={() => toggleHamburgerOnClick()}>
+          <Link to="/insurance-pools" onClick={() => toggleHamburgerOnClick()}>
             <p className=" text-center text-sm ">Insurance Pools</p>
           </Link>
         </div>

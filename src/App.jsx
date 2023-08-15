@@ -17,16 +17,11 @@ function App() {
       <Routes>
         <Route path="/warehousing" element={<Warehousing />} />
         <Route path="/logistics" element={<Logistics />} />
-        <Route path="/insurance" element={<Insurance />} />
-        <Route path="/product-basket" element={<ProductBakset />} />
-        <Route path="/operations" element={<Operations />} />
-        <Route path="/markets-fixed-assets" element={<MarketFixedAssets />} />
-        <Route
-          path="/markets-insurance-pools"
-          element={<MarketInsurancePools />}
-        />
-        <Route path="/markets-stable-coins" element={<MarketStableCoins />} />
-        <Route path="/markets-allcoin" element={<MarketAllCoin />} />
+
+        <Route path="/logistics-pools" />
+        <Route path="/warehouse-pools" />
+        <Route path="/working-capital-pools" />
+        <Route path="/insurance-pools" element={<Insurance />} />
       </Routes>
     </>
   );
