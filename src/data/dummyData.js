@@ -1,3 +1,30 @@
+export const dummyWorkingCapital = [
+  {
+    id: 0,
+    img: "/capital-venture.png",
+    name: "Lityer Hub1 Logistics",
+    desc: "Stake your USDC to receive daily rewards!",
+    apr: 0.071,
+    amtStaked: 10000000,
+    revenue: 15000000,
+    driverLabor: 2800000,
+    maintenanceLabor: 400000,
+    gasolineCost: 540000,
+    logisticsInsuranceCost: 800000,
+    janitorLabor: 250000,
+    mechanicLabor: 150000,
+    vanOneCost: 30000,
+    vanTwoCost: 52500,
+    leaseCost: 1250000,
+    warehouseInsuranceCost: 750000,
+    learnMoreInfo: "The delivery vans generate yield and you receive that!",
+  },
+];
+export const dummyPieChartData = [
+  { name: "Logistics", dollars: 3000000, fill: "#2de1bd" },
+  { name: "Warehousing", dollars: 7000000, fill: "white" },
+];
+
 export const dummyWarehouse = [
   {
     id: 0,

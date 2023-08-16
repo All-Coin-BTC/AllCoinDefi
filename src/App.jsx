@@ -11,6 +11,7 @@ import MarketAllCoin from "./Pages/MarketAllCoin";
 import Warehousing from "./Pages/Warehousing";
 import Logistics from "./Pages/Logistics";
 import Homepage from "./Pages/Homepage";
+import WorkingCapitalPool from "./Pages/WorkingCapitalPool";
 function App() {
   return (
     <>
@@ -19,10 +20,9 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/warehousing" element={<Warehousing />} />
         <Route path="/logistics" element={<Logistics />} />
-
         <Route path="/logistics-pools" />
         <Route path="/warehouse-pools" />
-        <Route path="/working-capital-pools" />
+        <Route path="/working-capital-pools" element={<WorkingCapitalPool />} />
         <Route path="/insurance-pools" element={<Insurance />} />
       </Routes>
     </>
