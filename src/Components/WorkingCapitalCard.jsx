@@ -145,10 +145,10 @@ export default function LogisticsCard({
         className="stake-card-container p-8 mx-4 flex flex-col justify-center items-center rounded-3xl mt-6"
       >
         <div className="asset-img">
-          <img src={img} className="w-12" />
+          <img src="/asset-management.png" className="w-12" />
         </div>
         <div className="asset-name text-white text-4xl text-center">
-          Working Capital Allocation Breakdown
+          Working Capital Allocation
         </div>
         <div className="asset-description text-gray-400 text-center text-sm mt-4">
           Warehousing
@@ -232,15 +232,6 @@ export default function LogisticsCard({
         <div className="profit-container mt-4 flex text-white gap-4 w-full justify-between">
           <div className="left-profit-text text-md"></div>
           <div className="dollar-amount"></div>
-        </div>
-        <div className="stake-btn">
-          <button className="text-white mt-8 px-8 py-4 bg-green-400 rounded-xl flex items-center justift-center gap-2">
-            <p>Stake</p>
-            <img className="w-8" src="usdc.png" />
-          </button>
-        </div>
-        <div className="learn-more-btn text-gray-400 text-sm mt-4">
-          <u>Learn More</u>
         </div>
       </div>
     </>
