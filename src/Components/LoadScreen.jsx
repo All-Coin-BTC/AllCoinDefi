@@ -3,7 +3,7 @@ import { PuffLoader } from "react-spinners";
 
 export default function LoadScreen({ loading }) {
   return (
-    <div className="loading-page-container h-screen">
+    <div className="loading-page-container">
       <div className="flex flex-col items-center justify-between h-full pt-52 pb-10 overflow-hidden">
         <div className="top-container flex justify-center items-center gap-2">
           <div className="ringLoader-container relative z-10">

@@ -26,6 +26,7 @@ body {
 
 .loading-page-container {
   background-image: linear-gradient(#171819, #52eba2);
+  height: 100dvh;
 }
 /*Navbar Styles*/
 .hamburger-inactive {
