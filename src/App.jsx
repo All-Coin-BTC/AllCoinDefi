@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import ProductBakset from "./Pages/ProductBakset";
@@ -12,19 +12,37 @@ import Warehousing from "./Pages/Warehousing";
 import Logistics from "./Pages/Logistics";
 import Homepage from "./Pages/Homepage";
 import WorkingCapitalPool from "./Pages/WorkingCapitalPool";
+import LoadScreen from "./Components/LoadScreen";
+
 function App() {
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 3500);
+  }, []);
   return (
     <>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="/warehousing" element={<Warehousing />} />
-        <Route path="/logistics" element={<Logistics />} />
-        <Route path="/logistics-pools" />
-        <Route path="/warehouse-pools" />
-        <Route path="/working-capital-pools" element={<WorkingCapitalPool />} />
-        <Route path="/insurance-pools" element={<Insurance />} />
-      </Routes>
+      {loading ? (
+        <LoadScreen loading={loading} />
+      ) : (
+        <>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Homepage />} />
+            <Route path="/warehousing" element={<Warehousing />} />
+            <Route path="/logistics" element={<Logistics />} />
+            <Route path="/logistics-pools" />
+            <Route path="/warehouse-pools" />
+            <Route
+              path="/working-capital-pools"
+              element={<WorkingCapitalPool />}
+            />
+            <Route path="/insurance-pools" element={<Insurance />} />
+          </Routes>
+        </>
+      )}
     </>
   );
 }

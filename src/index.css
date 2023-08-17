@@ -17,7 +17,15 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 22px;
-  padding-bottom: 50px;
+}
+/*Loading Screen*/
+.allcoin-spinner-logo {
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.loading-page-container {
+  background-image: linear-gradient(#171819, #52eba2);
 }
 /*Navbar Styles*/
 .hamburger-inactive {
