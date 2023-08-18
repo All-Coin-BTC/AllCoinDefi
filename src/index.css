@@ -74,10 +74,27 @@ body {
 
 /*Warehousing styles*/
 
-.labor-costs-dropdown-container-inactive {
+.labor-costs-dropdown-container-inactive,
+.revenue-info-dropdown-container-inactive,
+.assets-costs-dropdown-container-inactive,
+.insurance-costs-dropdown-container-inactive {
   display: none;
 }
 
-.labor-costs-dropdown-container-active {
+.labor-costs-dropdown-container-active,
+.revenue-info-dropdown-container-active,
+.assets-costs-dropdown-container-active,
+.insurance-costs-dropdown-container-active {
+  display: flex;
+}
+.display-more-arrow {
+  transition: 0.1s ease-in-out;
+}
+
+/* WC styles*/
+.learn-more-wc-inactive {
+  display: none;
+}
+.learn-more-wc-active {
   display: flex;
 }

@@ -77,13 +77,8 @@ export default function Navbar() {
             displayMarkets ? "markets-links-active" : "markets-links-inactive"
           } links-container text-white gap-3 flex flex-col`}
         >
-          <Link to="/logistics-pools" onClick={() => toggleHamburgerOnClick()}>
-            <p className=" text-center text-sm mt-4">Logistics Pools</p>
-          </Link>
-          <Link to="/warehouse-pools" onClick={() => toggleHamburgerOnClick()}>
-            <p className=" text-center text-sm">Warehouse Pools</p>
-          </Link>
           <Link
+            className="mt-4"
             to="/working-capital-pools"
             onClick={() => toggleHamburgerOnClick()}
           >

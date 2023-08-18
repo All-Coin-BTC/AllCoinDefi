@@ -21,10 +21,9 @@ export default function WarehousingCard({
   const profit = revenue - laborCostSum - assetCostSum - insuranceCost;
 
   const [displayLaborCosts, setDisplayLaborCosts] = useState(false);
-
-  useEffect(() => {
-    console.log(displayLaborCosts);
-  }, [displayLaborCosts]);
+  const [displayRevenueSources, setDisplayRevenueSources] = useState(false);
+  const [displayAssetsCosts, setDisplayAssetsCosts] = useState(false);
+  const [displayInsuranceCosts, setDisplayInsuranceCosts] = useState(false);
   return (
     <div
       key={id}
@@ -62,17 +61,43 @@ export default function WarehousingCard({
         <div className="right-revenue-text flex items-center gap-2">
           <div className="dollar-amount">${revenue.toLocaleString()}</div>
           <div className="show-more">
-            <img className="w-3" src="/down-filled-triangular-arrow.png" />
+            <img
+              className={`${
+                displayRevenueSources
+                  ? "w-3 rotate-90 display-more-arrow"
+                  : "w-3 display-more-arrow"
+              } `}
+              src="/down-filled-triangular-arrow.png"
+              onClick={() => setDisplayRevenueSources(!displayRevenueSources)}
+            />
           </div>
         </div>
       </div>
-      <div className="labor-costs-container mt-4 flex text-white gap-4 w-full justify-between  text-sm">
-        <div className="left-labor-text text-md">Labor Costs:</div>
-        <div className="right-labor-text flex items-center gap-2">
+      <div
+        className={`${
+          displayRevenueSources
+            ? "revenue-info-dropdown-container-active flex flex-col text-white text-xs w-full pr-7 mt-2"
+            : "revenue-info-dropdown-container-inactive"
+        }`}
+      >
+        <div className="dropdown-item-1 flex justify-between items-center">
+          <div className="left-revenue-info-text">Grocery Sales</div>
+          <div className="right-revenue-info-text">
+            ${revenue.toLocaleString()}
+          </div>
+        </div>
+      </div>
+      <div className="revenue-info-container mt-4 flex text-white gap-4 w-full justify-between  text-sm">
+        <div className="left-revenue-text text-md">Labor Costs:</div>
+        <div className="right-revenue-text flex items-center gap-2">
           <div className="dollar-amount">${laborCostSum.toLocaleString()}</div>
           <div className="show-more">
             <img
-              className="w-3"
+              className={`${
+                displayLaborCosts
+                  ? "w-3 rotate-90 display-more-arrow"
+                  : "w-3 display-more-arrow"
+              } `}
               src="/down-filled-triangular-arrow.png"
               onClick={() => setDisplayLaborCosts(!displayLaborCosts)}
             />
@@ -88,11 +113,15 @@ export default function WarehousingCard({
       >
         <div className="dropdown-item-1 flex justify-between items-center">
           <div className="left-labor-costs-text">Janitor Labor</div>
-          <div className="right-labor-costs-text">${janitorLabor}</div>
+          <div className="right-labor-costs-text">
+            ${janitorLabor.toLocaleString()}
+          </div>
         </div>
         <div className="dropdown-item-2 flex justify-between items-center">
           <div className="left-labor-costs-text">Mechanic Labor</div>
-          <div className="right-labor-costs-text">${mechanicLabor}</div>
+          <div className="right-labor-costs-text">
+            ${mechanicLabor.toLocaleString()}
+          </div>
         </div>
       </div>
       <div className="asset-costs-container mt-4 flex text-white gap-4 w-full justify-between  text-sm">
@@ -100,7 +129,41 @@ export default function WarehousingCard({
         <div className="right-asset-text flex items-center gap-2">
           <div className="dollar-amount">${assetCostSum.toLocaleString()}</div>
           <div className="show-more">
-            <img className="w-3" src="/down-filled-triangular-arrow.png" />
+            <img
+              className={`${
+                displayAssetsCosts
+                  ? "w-3 rotate-90 display-more-arrow"
+                  : "w-3 display-more-arrow"
+              } `}
+              src="/down-filled-triangular-arrow.png"
+              onClick={() => setDisplayAssetsCosts(!displayAssetsCosts)}
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className={`${
+          displayAssetsCosts
+            ? "assets-costs-dropdown-container-active flex flex-col text-white text-xs w-full pr-7 mt-2"
+            : "assets-costs-dropdown-container-inactive"
+        }`}
+      >
+        <div className="dropdown-item-1 flex justify-between items-center">
+          <div className="left-assets-costs-text">Van One</div>
+          <div className="right-assets-costs-text">
+            ${vanOneCost.toLocaleString()}
+          </div>
+        </div>
+        <div className="dropdown-item-2 flex justify-between items-center">
+          <div className="left-assets-costs-text">Van Two</div>
+          <div className="right-assets-costs-text">
+            ${vanTwoCost.toLocaleString()}
+          </div>
+        </div>
+        <div className="dropdown-item-3 flex justify-between items-center">
+          <div className="left-assets-costs-text">Lease</div>
+          <div className="right-assets-costs-text">
+            ${leaseCost.toLocaleString()}
           </div>
         </div>
       </div>
@@ -109,7 +172,29 @@ export default function WarehousingCard({
         <div className="right-insurance-text flex items-center gap-2">
           <div className="dollar-amount">${insuranceCost.toLocaleString()}</div>
           <div className="show-more">
-            <img className="w-3" src="/down-filled-triangular-arrow.png" />
+            <img
+              className={`${
+                displayInsuranceCosts
+                  ? "w-3 rotate-90 display-more-arrow"
+                  : "w-3 display-more-arrow"
+              } `}
+              src="/down-filled-triangular-arrow.png"
+              onClick={() => setDisplayInsuranceCosts(!displayInsuranceCosts)}
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className={`${
+          displayInsuranceCosts
+            ? "insurance-costs-dropdown-container-active flex flex-col text-white text-xs w-full pr-7 mt-2"
+            : "insurance-costs-dropdown-container-inactive"
+        }`}
+      >
+        <div className="dropdown-item-1 flex justify-between items-center">
+          <div className="left-insurance-costs-text">Insurance Premium</div>
+          <div className="right-insurance-costs-text">
+            ${insuranceCost.toLocaleString()}
           </div>
         </div>
       </div>

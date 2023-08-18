@@ -17,7 +17,8 @@ export const dummyWorkingCapital = [
     vanTwoCost: 52500,
     leaseCost: 1250000,
     warehouseInsuranceCost: 750000,
-    learnMoreInfo: "The delivery vans generate yield and you receive that!",
+    learnMoreInfoWorkingCapital:
+      " By staking in this pool you are distributing your funds split between the warhousing and logistics pools. To choose an individual pool choose from the options below.",
   },
 ];
 export const dummyPieChartData = [

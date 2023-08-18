@@ -1,5 +1,5 @@
-import React from "react";
-
+import React, { useState } from "react";
+import { nanoid } from "nanoid";
 export default function LogisticsCard({
   id,
   img,
@@ -12,7 +12,7 @@ export default function LogisticsCard({
   maintenanceLabor,
   gasolineCost,
   logisticsInsuranceCost,
-  learnMoreInfo,
+  learnMoreInfoWorkingCapital,
   janitorLabor,
   mechanicLabor,
   vanOneCost,
@@ -35,19 +35,29 @@ export default function LogisticsCard({
     laborCostSum -
     suppliesCostSum -
     insuranceCostSum;
+
+  const [
+    displayLearnMoreInfoWorkingCapital,
+    setDisplayLearnMoreInfoWorkingCapital,
+  ] = useState(false);
+
+  function toggleDisplayLearnMoreWorkingCapital() {
+    setDisplayLearnMoreInfoWorkingCapital(!displayLearnMoreInfoWorkingCapital);
+  }
+
   return (
     <>
       <div
-        key={id}
+        key={nanoid()}
         className="stake-card-container p-8 mx-4 flex flex-col justify-center items-center rounded-3xl"
       >
-        <div className="asset-img">
+        <div className="wc-img">
           <img src={img} className="w-12" />
         </div>
-        <div className="asset-name text-white text-4xl text-center">
+        <div className="wc-title text-white text-4xl text-center">
           Working Capital
         </div>
-        <div className="asset-description text-gray-400 text-center text-sm mt-4">
+        <div className="wc-description text-gray-400 text-center text-sm mt-4">
           {desc}
         </div>
         <div className="financial-information flex items-center justify-center gap-4 mt-4 w-full">
@@ -57,7 +67,7 @@ export default function LogisticsCard({
             </div>
             <div className="apr-info flex justify-center gap-2 items-center">
               <div className="apr-tag text-gray-300 font-light text-sm">
-                APR{" "}
+                APR
               </div>
               <img src="info.png" className="w-5 h-5" />
             </div>
@@ -135,14 +145,25 @@ export default function LogisticsCard({
             <img className="w-8" src="usdc.png" />
           </button>
         </div>
-        <div className="learn-more-btn text-gray-400 text-sm mt-4">
-          <u>Learn More</u>
+        <div className="learn-more-btn text-gray-400 text-sm mt-4 text-center">
+          <u onClick={() => toggleDisplayLearnMoreWorkingCapital()}>
+            {displayLearnMoreInfoWorkingCapital ? "Show Less" : "Learn More"}
+          </u>
+          <div
+            className={`${
+              displayLearnMoreInfoWorkingCapital
+                ? "learn-more-wc-active text-center flex flex-col mt-4 text-white"
+                : "learn-more-wc-inactive"
+            }`}
+          >
+            <p>{learnMoreInfoWorkingCapital}</p>
+          </div>
         </div>
       </div>
 
       <div
-        key={id}
-        className="stake-card-container p-8 mx-4 flex flex-col justify-center items-center rounded-3xl mt-6"
+        key={nanoid()}
+        className="stake-card-container p-8 mx-4 flex flex-col justify-center items-center rounded-3xl mt-6 mb-6"
       >
         <div className="asset-img">
           <img src="/asset-management.png" className="w-12" />

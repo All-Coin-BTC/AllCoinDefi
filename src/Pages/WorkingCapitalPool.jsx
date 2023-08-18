@@ -39,7 +39,7 @@ export default function WorkingCapitalPool() {
             maintenanceLabor={item.maintenanceLabor}
             gasolineCost={item.gasolineCost}
             logisticsInsuranceCost={item.logisticsInsuranceCost}
-            learnMoreInfo={item.learnMoreInfo}
+            learnMoreInfoWorkingCapital={item.learnMoreInfoWorkingCapital}
             janitorLabor={item.janitorLabor}
             mechanicLabor={item.mechanicLabor}
             vanOneCost={item.vanOneCost}
