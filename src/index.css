@@ -71,3 +71,13 @@ body {
 .products-container {
   background-color: #1d2833;
 }
+
+/*Warehousing styles*/
+
+.labor-costs-dropdown-container-inactive {
+  display: none;
+}
+
+.labor-costs-dropdown-container-active {
+  display: flex;
+}

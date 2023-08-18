@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 export default function WarehousingCard({
   id,
@@ -19,6 +19,12 @@ export default function WarehousingCard({
   const laborCostSum = janitorLabor + mechanicLabor;
   const assetCostSum = vanOneCost + vanTwoCost + leaseCost;
   const profit = revenue - laborCostSum - assetCostSum - insuranceCost;
+
+  const [displayLaborCosts, setDisplayLaborCosts] = useState(false);
+
+  useEffect(() => {
+    console.log(displayLaborCosts);
+  }, [displayLaborCosts]);
   return (
     <div
       key={id}
@@ -65,8 +71,28 @@ export default function WarehousingCard({
         <div className="right-labor-text flex items-center gap-2">
           <div className="dollar-amount">${laborCostSum.toLocaleString()}</div>
           <div className="show-more">
-            <img className="w-3" src="/down-filled-triangular-arrow.png" />
+            <img
+              className="w-3"
+              src="/down-filled-triangular-arrow.png"
+              onClick={() => setDisplayLaborCosts(!displayLaborCosts)}
+            />
           </div>
+        </div>
+      </div>
+      <div
+        className={`${
+          displayLaborCosts
+            ? "labor-costs-dropdown-container-active flex flex-col text-white text-xs w-full pr-7 mt-2"
+            : "labor-costs-dropdown-container-inactive"
+        }`}
+      >
+        <div className="dropdown-item-1 flex justify-between items-center">
+          <div className="left-labor-costs-text">Janitor Labor</div>
+          <div className="right-labor-costs-text">${janitorLabor}</div>
+        </div>
+        <div className="dropdown-item-2 flex justify-between items-center">
+          <div className="left-labor-costs-text">Mechanic Labor</div>
+          <div className="right-labor-costs-text">${mechanicLabor}</div>
         </div>
       </div>
       <div className="asset-costs-container mt-4 flex text-white gap-4 w-full justify-between  text-sm">
